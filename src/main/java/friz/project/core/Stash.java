@@ -1,5 +1,7 @@
 package friz.project.core;
 
+import java.io.*;
+import java.util.*;
 import cn.nukkit.item.Item;
 
 /** Хранилище выдачи: если инвентарь полон — предметы не теряются и не дублируются. */
