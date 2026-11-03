@@ -23,6 +23,7 @@ public class PlayerData {
     public int mutes = 0;
 
     public static class Manager {
+        public static Manager INSTANCE = new Manager();
         private static final Yaml yaml = new Yaml();
         private static final File DIR = new File("players");
         public static void init() { DIR.mkdirs(); }
