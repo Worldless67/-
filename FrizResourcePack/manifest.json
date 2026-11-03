@@ -1,0 +1,28 @@
+{
+  "format_version": 1,
+  "header": {
+    "name": "FrizMine Resource Pack",
+    "uuid": "c8c1d29e-6bfa-4a2b-9f5e-1a2b3c4d5e6f",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "d9d2e30f-7cga-5b3c-0a6f-2b3c4d5e6f7a",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# FrizProject 1.9.0 — FrizMine Bedrock (Nukkit-MOT 1.2.0, Java 17)
+server:
+  number: 1
+spawn:
+  x: 0
+  y: 64
+  z: 0
+economy:
+  start-money: 500
+  autoprice-sell-multiplier: 0.5
+kits:
+  cooldown-hours: 24
+hud:
+  enabled: true
+  clear-minutes: 60
+shops:
+  auction-commission: 5
+  auction-days: 7
+events:
+  mystic-interval-minutes: 20
+  beacon-open-seconds: 300
+  flower-timer-seconds: 600
+  volcano-chests: 5
+automine:
+  interval-seconds: 300
+  tiers: ["Угольная", "Железная", "Золотая", "Алмазная", "Изумрудная", "Незеритовая"]
+cases:
+  chances: {common: 70, rare: 25, epic: 5}
+protection:
+  cleanup-minutes: 10
+  backup-minutes: 30
+disguise:
+  see-perm: friz.disguise.see
+# Раздел 22: неуточнённые данные — НЕ выдуманы, заполняются позже
+pending:
+  kits-warrior: "уточнить состав"
+  kits-wanderer: "уточнить состав"
+  kits-lord: "уточнить состав"
+  kits-legend: "уточнить состав"
+  kits-prince: "уточнить состав"
+  kits-keeper: "уточнить состав"
+  media-kits: "уточнить оба набора"
+  starter-extra-2: "уточнить два предмета"
+  lord-armor-parts: "уточнить оставшиеся части"
+  unknown-potions: "уточнить названия зелий"
+  sphere-fin-stats: "уточнить характеристики"
+  enchant-revive: "уточнить эффект Оживления"
+  enchant-sniper: "уточнить эффект Снайпера"
+  enchant-linger: "уточнить эффект Лингера"
+  enchant-probability: "уточнить точное название Вероятность III"
+  enchant-unbreakable: "уточнить точное название Неразрушимости просы"

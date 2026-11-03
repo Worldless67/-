@@ -1,0 +1,64 @@
+{
+  "format_version": "1.21.114",
+  "item_texture": {
+    "texture_data": {
+      "friz:sphere_athens": {
+        "texture": "textures/items/sphere_athens"
+      },
+      "friz:sphere_punisher": {
+        "texture": "textures/items/sphere_punisher"
+      },
+      "friz:sphere_leviathan": {
+        "texture": "textures/items/sphere_leviathan"
+      },
+      "friz:sphere_necro": {
+        "texture": "textures/items/sphere_necro"
+      },
+      "friz:sphere_warlock": {
+        "texture": "textures/items/sphere_warlock"
+      },
+      "friz:sphere_fin": {
+        "texture": "textures/items/sphere_fin"
+      },
+      "friz:sphere_rage": {
+        "texture": "textures/items/sphere_rage"
+      },
+      "friz:sphere_titan": {
+        "texture": "textures/items/sphere_titan"
+      },
+      "friz:sphere_speed": {
+        "texture": "textures/items/sphere_speed"
+      },
+      "friz:sphere_vampire": {
+        "texture": "textures/items/sphere_vampire"
+      },
+      "friz:talisman_totem": {
+        "texture": "textures/items/talisman_totem"
+      },
+      "friz:key_common": {
+        "texture": "textures/items/key_common"
+      },
+      "friz:key_rare": {
+        "texture": "textures/items/key_rare"
+      },
+      "friz:key_donate": {
+        "texture": "textures/items/key_donate"
+      },
+      "friz:weapon_icon": {
+        "texture": "textures/items/weapon_icon"
+      },
+      "friz:armor_icon": {
+        "texture": "textures/items/armor_icon"
+      },
+      "friz:tool_icon": {
+        "texture": "textures/items/tool_icon"
+      },
+      "friz:consumable_icon": {
+        "texture": "textures/items/consumable_icon"
+      },
+      "friz:donatshop_icon": {
+        "texture": "textures/items/donatshop_icon"
+      }
+    }
+  }
+}

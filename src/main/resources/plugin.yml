@@ -1,0 +1,51 @@
+name: FrizProject
+main: friz.project.FrizProject
+version: "1.9.0"
+api: ["1.0.0"]
+author: FrizMine
+commands:
+  bal: {description: "Баланс", permission: friz.player}
+  pay: {description: "Перевод денег", permission: friz.player}
+  home: {description: "Дома", permission: friz.player}
+  tpa: {description: "Телепорт к игроку", permission: friz.player}
+  msg: {description: "Личное сообщение", permission: friz.player}
+  shop: {description: "Магазин", permission: friz.player}
+  donatshop: {description: "Донат-магазин", permission: friz.player}
+  auction: {description: "Аукцион", permission: friz.player}
+  kit: {description: "Наборы", permission: friz.player}
+  cases: {description: "Кейсы", permission: friz.player}
+  quests: {description: "Задания", permission: friz.player}
+  stash: {description: "Хранилище выдачи", permission: friz.player}
+  vote: {description: "Голосование", permission: friz.player}
+  report: {description: "Жалоба", permission: friz.player}
+  helpop: {description: "Вопрос хелперу", permission: friz.player}
+  mail: {description: "Почта", permission: friz.player}
+  party: {description: "Партия", permission: friz.player}
+  trade: {description: "Обмен", permission: friz.player}
+  duel: {description: "Дуэль", permission: friz.player}
+  spawn: {description: "На спавн", permission: friz.player}
+  nick: {description: "Смена ника", permission: friz.player}
+  disguise: {description: "Маскировка", permission: friz.donate}
+  realname: {description: "Настоящий ник", permission: friz.helper}
+  warn: {description: "Варн", permission: friz.helper}
+  mute: {description: "Мут", permission: friz.helper}
+  kick: {description: "Кик", permission: friz.helper}
+  tempban: {description: "Бан", permission: friz.moder}
+  freeze: {description: "Заморозка", permission: friz.moder}
+  rank: {description: "Выдача ранга", permission: friz.admin}
+  givemoney: {description: "Выдать деньги", permission: friz.admin}
+  givefk: {description: "Выдать FK", permission: friz.admin}
+  event: {description: "Управление событиями", permission: friz.admin}
+  mine: {description: "Управление шахтой", permission: friz.admin}
+  pending: {description: "Неуточнённые данные", permission: friz.admin}
+  backup: {description: "Бэкап", permission: friz.admin}
+  npc: {description: "NPC", permission: friz.admin}
+  creator: {description: "Команды Создателя", permission: friz.creator}
+permissions:
+  friz.player: {default: true}
+  friz.donate: {default: false}
+  friz.helper: {default: op}
+  friz.moder: {default: op}
+  friz.admin: {default: op}
+  friz.creator: {default: op}
+  friz.disguise.see: {default: op}
