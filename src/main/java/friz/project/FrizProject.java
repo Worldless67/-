@@ -44,7 +44,7 @@ public class FrizProject extends PluginBase {
         // Таски
         getServer().getScheduler().scheduleRepeatingTask(this, () -> {
             try { friz.project.tasks.Tasks.tickAll(new ArrayList<>(getServer().getOnlinePlayers().values())); } catch (Exception ignored) { }
-        }, 20, 20);
+                }, 20);
         getServer().getScheduler().scheduleRepeatingTask(this, () -> {
             try { AutoMine.tick(lvl, 0, 40, 0); Storage.tickBackup(); } catch (Exception ignored) { }
         }, 20 * 5, 20 * 5);
