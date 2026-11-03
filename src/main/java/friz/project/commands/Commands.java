@@ -54,9 +54,9 @@ public class Commands {
             case "kit" -> { if (args.length < 1) { Msg.send(p, "Наборы: " + String.join(", ", Kits.names())); return true; }
                 Kits.Kit k = Kits.get(args[0]);
                 if (k == null) { Msg.error(p, "Набор не найден."); return true; }
-                if (Kits.claim(p, k, d, friz.project.core.PlayerData.Manager.INSTANCE)) Msg.ok(p, "Набор выдан."); }
+                if (Kits.claim(p, k, d,friz.project.core.PlayerData.Manager.load(p.getName()) Msg.ok(p, "Набор выдан."); }
             case "cases" -> { if (args.length < 1) { Msg.send(p, "Кейсы: Обычный, Редкий, Донат. /cases open <тип>"); return true; }
-                if (args[0].equalsIgnoreCase("open") && args.length > 1) { Cases.open(p, args[1], d, friz.project.core.PlayerData.Manager.INSTANCE); } }
+                if (args[0].equalsIgnoreCase("open") && args.length > 1) { Cases.open(p, args[1], d, PlayerData.Manager.load(p.getName())
             case "quests" -> { StringBuilder sb = new StringBuilder("Задания:\n");
                 for (Quests.Quest q : Quests.all()) sb.append(q.name).append(" (").append(Quests.progress(d, q)).append("/").append(q.target).append(")\n");
                 Msg.send(p, sb.toString()); }
