@@ -23,6 +23,7 @@ public class Services {
         d.warns.add(System.currentTimeMillis() + " by " + staff);
         int count = d.warns.size();
         PlayerData.Manager.save(target, d);
+ public static Manager INSTANCE = new Manager();
         log("WARN", target, "варн #" + count + " от " + staff);
         if (count >= 3) { log("AUTOBAN", target, "3 варна"); return "авто-бан (3-й варн)"; }
         return "варн #" + count;
