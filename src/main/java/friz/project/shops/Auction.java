@@ -1,6 +1,7 @@
 package friz.project.shops;
 
 import cn.nukkit.item.Item;
+import cn.nukkit.Player;
 import friz.project.core.*;
 import java.io.*;
 import java.util.*;
