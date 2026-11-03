@@ -22,7 +22,7 @@ public class AutoMine {
             case 2 -> Block.GOLD_ORE;
             case 3 -> Block.DIAMOND_ORE;
             case 4 -> Block.EMERALD_ORE;
-            default -> Block.NETHERITE_ORE;
+          default -> Block.ANCIENT_DEBRIS;
         };
         for (int dx=-5;dx<=5;dx++) for(int dz=-5;dz<=5;dz++) for(int dy=0;dy<4;dy++) {
             lvl.setBlock(x+dx, y+dy, z+dz, 0, Block.get(ore), true, true);
