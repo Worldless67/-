@@ -14,7 +14,7 @@ import java.io.File;
  *
  * Схема:
  *  центр — площадь с фонтаном и логотипом FM из золота;
- *  запад — домик обычного магазина с NPC-скупщиком;
+ *  запад — домик обычного магазина;
  *  восток — домик донат-магазина и стенд аукциониста;
  *  юг — площадка кейсов и PvP-арена с трибунами;
  *  север — доска заданий и вход в автошахту;
@@ -74,7 +74,7 @@ public class SpawnMap {
         w.setBlock(new Vector3(x, y, z), Block.get(id));
     }
 
-    /** Полая прямоугольная площадка из блока id на уровне y. */
+    /** Прямоугольная площадка из блока id на уровне y. */
     private void plate(int x1, int z1, int x2, int z2, int y, int id) {
         for (int x = Math.min(x1, x2); x <= Math.max(x1, x2); x++)
             for (int z = Math.min(z1, z2); z <= Math.max(z1, z2); z++)
@@ -111,13 +111,13 @@ public class SpawnMap {
 
     /** Простое дерево: ствол 4 блока и крона 5×5. */
     private void tree(int x, int z) {
-        for (int y = 1; y <= 4; y++) set(x, G + y, z, Block.OAK_LOG);
+        for (int y = 1; y <= 4; y++) set(x, G + y, z, Block.LOG);
         for (int dx = -2; dx <= 2; dx++)
             for (int dz = -2; dz <= 2; dz++)
                 for (int dy = 3; dy <= 6; dy++) {
                     int dist = Math.abs(dx) + Math.abs(dz) + Math.abs(dy - 4);
                     if (dist <= 3 && !(dx == 0 && dz == 0 && dy <= 4))
-                        set(x + dx, G + dy, z + dz, Block.OAK_LEAVES);
+                        set(x + dx, G + dy, z + dz, Block.LEAVES);
                 }
     }
 
@@ -225,8 +225,10 @@ public class SpawnMap {
         // крыша
         plate(-38, -12, -30, -6, G + 5, Block.PLANKS);
         // витрина из стекла и дверной проём с востока
-        for (int z = -11; z <= -7; z++) set(-30, G + 1, z, Block.GLASS);
-        for (int z = -11; z <= -7; z++) set(-30, G + 2, z, Block.GLASS);
+        for (int z = -11; z <= -7; z++) {
+            set(-30, G + 1, z, Block.GLASS);
+            set(-30, G + 2, z, Block.GLASS);
+        }
         set(-30, G + 1, -9, Block.AIR);
         set(-30, G + 2, -9, Block.AIR);
         // прилавок внутри
@@ -240,8 +242,10 @@ public class SpawnMap {
         plate(30, -12, 38, -6, G, Block.QUARTZ_BLOCK);
         walls(30, -12, 38, -6, G + 1, G + 4, Block.QUARTZ_BLOCK);
         plate(30, -12, 38, -6, G + 5, Block.GOLD_BLOCK);
-        for (int z = -11; z <= -7; z++) set(30, G + 1, z, Block.GLASS);
-        for (int z = -11; z <= -7; z++) set(30, G + 2, z, Block.GLASS);
+        for (int z = -11; z <= -7; z++) {
+            set(30, G + 1, z, Block.GLASS);
+            set(30, G + 2, z, Block.GLASS);
+        }
         set(30, G + 1, -9, Block.AIR);
         set(30, G + 2, -9, Block.AIR);
         sign(31, G + 1, -5, new String[]{"Донат-магазин", "привилегии", "/donate"});
@@ -310,10 +314,8 @@ public class SpawnMap {
     private void mine() {
         plate(-5, -38, 5, -33, G, Block.STONE);
         walls(-5, -38, 5, -33, G + 1, G + 3, Block.STONE);
-        // проём
-        set(0, G + 1, -33, Block.IRON_DOOR);
+        set(0, G + 1, -33, 71); // железная дверь (id 71)
         set(0, G + 2, -33, Block.AIR);
-        // затемнение внутри
         plate(-4, -37, 4, -34, G, Block.COBBLESTONE);
         set(-4, G + 1, -35, Block.TORCH);
         set(4, G + 1, -35, Block.TORCH);
