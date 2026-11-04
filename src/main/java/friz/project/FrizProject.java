@@ -39,7 +39,7 @@ public class FrizProject extends PluginBase {
         // Автопостройка спавна при первом старте
         var lvl = getServer().getDefaultLevel();
         var spawn = lvl.getSpawnLocation();
-        Spawn.build(lvl, spawn.getFloorX(), spawn.getFloorY(), spawn.getFloorZ());
+        // Spawn.build(lvl, spawn.getFloorX(), spawn.getFloorY(), spawn.getFloorZ());
         getLogger().info("FrizProject 1.9.0 включен. Спавн построен.");
         // Таски
         getServer().getScheduler().scheduleRepeatingTask(this, () -> {
