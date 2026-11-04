@@ -47,7 +47,9 @@ public class FrizProject extends PluginBase {
                 }, 20);
         getServer().getScheduler().scheduleRepeatingTask(this, () -> {
             try { AutoMine.tick(lvl, 0, 40, 0); Storage.tickBackup(); } catch (Exception ignored) { }
-              }, 20 * 5);
+              }, 20 * 5);       
+        friz.project.map.SpawnMap.build(this);
+
     }
 
     @Override
