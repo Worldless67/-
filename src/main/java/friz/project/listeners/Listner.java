@@ -35,7 +35,7 @@ public class Listner implements Listener {
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {
         if (e.getDamager() instanceof Player attacker) {
-            if (Services.frozen.containsKey(attacker.getName())) { e.setCancelled(true); return; }
+                if (friz.project.services.Services.frozen.containsKey(attacker.getName())) { e.setCancelled(true); return; }
             if (e.getEntity() instanceof Player) {
                 Consumables.battleMode.add(attacker.getName());
             }
@@ -43,7 +43,7 @@ public class Listner implements Listener {
             e.setDamage(dmg);
             FunctionalItems.applyOnHit(attacker, e.getEntity(), e);
         }
-        if (e.getEntity() instanceof Player victim && Services.frozen.containsKey(victim.getName())) {
+        if (e.getEntity() instanceof Player victim && friz.project.services.Services.frozen.containsKey(victim.getName())) {
             e.setCancelled(true);
         }
     }
